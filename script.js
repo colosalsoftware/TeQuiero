@@ -14,7 +14,8 @@ document.getElementById('startButton').addEventListener('click', function() {
         "Tu sonrisa ilumina mi mundo.",
         "Agradezco cada día tenerte a mi lado.",
         "Eres el mejor capítulo de mi vida.",
-        "Gracias por ser parte de mi vida."
+        "Gracias por ser parte de mi vida.",
+        "Gracias por hacer parte de mi vida."
     ];
 
     let index = 0;
@@ -36,7 +37,7 @@ document.getElementById('startButton').addEventListener('click', function() {
 
             index++;
         } else {
-            message.innerText = "Gracias por hacer parte de mi vida. att: Andrés.";
+            message.innerText = "¿ Quieres ser mi novia ?";
             message.style.opacity = 1;
             clearInterval(interval);
         }
