@@ -40,7 +40,7 @@ document.getElementById('startButton').addEventListener('click', function() {
             clearInterval(interval);
             document.getElementById('buttons').style.display = 'block';
         }
-    }, 100);
+    }, 1000);
 const noButton = document.getElementById('noButton');
 noButton.addEventListener('mouseover', function() {
     console.log("You're trying to reach the 'No' button!");
