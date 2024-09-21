@@ -1,9 +1,9 @@
 document.getElementById('startButton').addEventListener('click', function() {
-    // Iniciar canción
     const song = document.getElementById('song');
     song.play();
 
-    // Frases de amor
+    const coronau = document.getElementById('coronau')
+
     const frases = [
         "Eres mi luz en los días más oscuros.",
         "Cada momento contigo es un regalo.",
@@ -22,10 +22,8 @@ document.getElementById('startButton').addEventListener('click', function() {
     const message = document.getElementById('message');
     const startButton = document.getElementById('startButton');
 
-    // Ocultar botón
     startButton.style.display = 'none';
 
-    // Mostrar frases con intervalo
     const interval = setInterval(() => {
         if (index < frases.length) {
             message.innerText = frases[index];
@@ -33,13 +31,33 @@ document.getElementById('startButton').addEventListener('click', function() {
 
             setTimeout(() => {
                 message.style.opacity = 0;
-            }, 7000); // Esconder la frase después de 2 segundos
+            }, 7000);
 
             index++;
         } else {
             message.innerText = "¿ Quieres ser mi novia ?";
             message.style.opacity = 1;
             clearInterval(interval);
+            document.getElementById('buttons').style.display = 'block';
         }
-    }, 10000); // Cambiar la frase cada 3 segundos
+    }, 100);
+const noButton = document.getElementById('noButton');
+noButton.addEventListener('mouseover', function() {
+    console.log("You're trying to reach the 'No' button!");
+
+    const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+    noButton.style.position = 'absolute';
+    noButton.style.left = x + 'px';
+    noButton.style.top = y + 'px';
+});
+
+const yesButton = document.getElementById('yesButton');
+yesButton.addEventListener('click', function() {
+    console.log('Sí button clicked!');
+    song.pause();
+    coronau.play();
+});
+
 });
